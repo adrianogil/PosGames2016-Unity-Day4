@@ -16,8 +16,8 @@ public class ScrollTexture : MonoBehaviour {
 	void Start () {
 		scrollOffset = Vector2.zero;
 
-		material.mainTextureOffset = scrollOffset;
-//		material.SetTextureOffset ("_MainTex", scrollOffset);
+		// material.mainTextureOffset = scrollOffset;
+		material.SetTextureOffset ("_MainTex", scrollOffset);
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,8 @@ public class ScrollTexture : MonoBehaviour {
 		// Atualiza offset
 		scrollOffset += scrollVelocity * Time.deltaTime;
 
-		material.mainTextureOffset = scrollOffset;
+		// material.mainTextureOffset = scrollOffset;
+		material.SetTextureOffset ("_MainTex", scrollOffset);
 	}
 
 }
