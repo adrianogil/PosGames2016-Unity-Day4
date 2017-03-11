@@ -22,4 +22,8 @@ public class PipesManager : ScrollingManager {
 		return base.GenerateObject(localPosition);
 	}
 
+	public void StopAllScroll()
+	{
+		BroadcastMessage (GameMessage.StopScroll);
+	}
 }
